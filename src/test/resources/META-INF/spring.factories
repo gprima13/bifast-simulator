@@ -1,0 +1,2 @@
+org.springframework.test.context.ContextCustomizerFactory = com.alto.id.bifast.\
+    simulator.config.SqlTestContainersSpringContextCustomizerFactory

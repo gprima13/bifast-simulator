@@ -1,0 +1,57 @@
+/**
+ * The Test Category entity, contains the category for test
+ *	eg: accountInquiry, creditTransfer 
+ */
+entity TestCategory{
+	testSuiteName String
+    isActive Boolean
+}
+
+entity TestCase {
+	caseName String
+    responseBody String
+  	transactionStatus String
+    responseCode String
+    isActive Boolean
+}
+
+entity TestCaseDetail {
+	matchingParam String
+    matchingValue String
+    valueType ValueType
+    isActive Boolean
+}
+
+entity Bank{
+	bicCode String
+    bankName String
+}
+
+enum ValueType{
+	ALPHANUMERIC, NUMERIC, BOOLEAN
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	/**
+	* A relationship
+	*/
+    TestCategory to TestCase{category}
+    TestCase to TestCaseDetail{testCase}
+
+}
+
+
+
+
+// Set pagination options
+paginate TestCase,TestCaseDetail with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

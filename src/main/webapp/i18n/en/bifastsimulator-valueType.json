@@ -1,0 +1,10 @@
+{
+  "bifastsimulatorApp": {
+    "ValueType": {
+      "null": "",
+      "ALPHANUMERIC": "ALPHANUMERIC",
+      "NUMERIC": "NUMERIC",
+      "BOOLEAN": "BOOLEAN"
+    }
+  }
+}

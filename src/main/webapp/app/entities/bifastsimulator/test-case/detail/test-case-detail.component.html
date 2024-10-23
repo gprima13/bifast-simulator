@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (testCase(); as testCaseRef) {
+      <div>
+        <h2 data-cy="testCaseDetailsHeading">
+          <span jhiTranslate="bifastsimulatorApp.bifastsimulatorTestCase.detail.title">Test Case</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ testCaseRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="bifastsimulatorApp.bifastsimulatorTestCase.caseName">Case Name</span></dt>
+          <dd>
+            <span>{{ testCaseRef.caseName }}</span>
+          </dd>
+          <dt><span jhiTranslate="bifastsimulatorApp.bifastsimulatorTestCase.responseBody">Response Body</span></dt>
+          <dd>
+            <span>{{ testCaseRef.responseBody }}</span>
+          </dd>
+          <dt><span jhiTranslate="bifastsimulatorApp.bifastsimulatorTestCase.transactionStatus">Transaction Status</span></dt>
+          <dd>
+            <span>{{ testCaseRef.transactionStatus }}</span>
+          </dd>
+          <dt><span jhiTranslate="bifastsimulatorApp.bifastsimulatorTestCase.responseCode">Response Code</span></dt>
+          <dd>
+            <span>{{ testCaseRef.responseCode }}</span>
+          </dd>
+          <dt><span jhiTranslate="bifastsimulatorApp.bifastsimulatorTestCase.isActive">Is Active</span></dt>
+          <dd>
+            <span>{{ testCaseRef.isActive }}</span>
+          </dd>
+          <dt><span jhiTranslate="bifastsimulatorApp.bifastsimulatorTestCase.category">Category</span></dt>
+          <dd>
+            @if (testCase()!.category) {
+              <div>
+                <a [routerLink]="['/bifastsimulator/test-category', testCase()!.category?.id, 'view']">{{ testCaseRef.category?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/bifastsimulator/test-case', testCaseRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

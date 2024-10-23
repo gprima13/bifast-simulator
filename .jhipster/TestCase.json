@@ -1,0 +1,51 @@
+{
+  "annotations": {
+    "changelogDate": "20241023095741"
+  },
+  "applications": "*",
+  "clientRootFolder": "bifastsimulator",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "caseName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "responseBody",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "transactionStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "responseCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "microserviceName": "bifastsimulator",
+  "name": "TestCase",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "testCaseDetail",
+      "otherEntityRelationshipName": "testCase",
+      "relationshipName": "testCaseDetail",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "testCategory",
+      "relationshipName": "category",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

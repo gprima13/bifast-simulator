@@ -1,0 +1,26 @@
+{
+  "bifastsimulatorApp": {
+    "bifastsimulatorTestCategory": {
+      "home": {
+        "title": "Test Categories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Test Category",
+        "createOrEditLabel": "Create or edit a Test Category",
+        "notFound": "No Test Categories found"
+      },
+      "created": "A new Test Category is created with identifier {{ param }}",
+      "updated": "A Test Category is updated with identifier {{ param }}",
+      "deleted": "A Test Category is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Test Category {{ id }}?"
+      },
+      "detail": {
+        "title": "Test Category"
+      },
+      "id": "ID",
+      "testSuiteName": "Test Suite Name",
+      "isActive": "Is Active",
+      "testCase": "Test Case"
+    }
+  }
+}

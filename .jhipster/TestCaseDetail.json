@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20241023095742"
+  },
+  "applications": "*",
+  "clientRootFolder": "bifastsimulator",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "matchingParam",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "matchingValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valueType",
+      "fieldType": "ValueType",
+      "fieldValues": "ALPHANUMERIC,NUMERIC,BOOLEAN"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "microserviceName": "bifastsimulator",
+  "name": "TestCaseDetail",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "testCase",
+      "relationshipName": "testCase",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

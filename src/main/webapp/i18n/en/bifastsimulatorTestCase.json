@@ -1,0 +1,30 @@
+{
+  "bifastsimulatorApp": {
+    "bifastsimulatorTestCase": {
+      "home": {
+        "title": "Test Cases",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Test Case",
+        "createOrEditLabel": "Create or edit a Test Case",
+        "notFound": "No Test Cases found"
+      },
+      "created": "A new Test Case is created with identifier {{ param }}",
+      "updated": "A Test Case is updated with identifier {{ param }}",
+      "deleted": "A Test Case is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Test Case {{ id }}?"
+      },
+      "detail": {
+        "title": "Test Case"
+      },
+      "id": "ID",
+      "caseName": "Case Name",
+      "responseBody": "Response Body",
+      "transactionStatus": "Transaction Status",
+      "responseCode": "Response Code",
+      "isActive": "Is Active",
+      "testCaseDetail": "Test Case Detail",
+      "category": "Category"
+    }
+  }
+}

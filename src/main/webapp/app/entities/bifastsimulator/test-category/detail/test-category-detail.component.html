@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (testCategory(); as testCategoryRef) {
+      <div>
+        <h2 data-cy="testCategoryDetailsHeading">
+          <span jhiTranslate="bifastsimulatorApp.bifastsimulatorTestCategory.detail.title">Test Category</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ testCategoryRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="bifastsimulatorApp.bifastsimulatorTestCategory.testSuiteName">Test Suite Name</span></dt>
+          <dd>
+            <span>{{ testCategoryRef.testSuiteName }}</span>
+          </dd>
+          <dt><span jhiTranslate="bifastsimulatorApp.bifastsimulatorTestCategory.isActive">Is Active</span></dt>
+          <dd>
+            <span>{{ testCategoryRef.isActive }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/bifastsimulator/test-category', testCategoryRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
